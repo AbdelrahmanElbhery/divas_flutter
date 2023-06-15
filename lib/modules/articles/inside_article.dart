@@ -8,7 +8,6 @@ import 'package:training2/main_cubit/cubit.dart';
 import 'package:training2/main_cubit/state.dart';
 
 import '../../bottom.dart';
-import '../../models/article_details_model.dart';
 
 class InsideArticles extends StatelessWidget {
   const InsideArticles({Key? key}) : super(key: key);
@@ -29,16 +28,17 @@ class InsideArticles extends StatelessWidget {
                     children: [
                       Image(
                         height: MediaQuery.of(context).size.height * .3,
-                        image: AssetImage('assets/images/article_photo.jpg'),
+                        image:
+                            const AssetImage('assets/images/article_photo.jpg'),
                         fit: BoxFit.fill,
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -99,15 +99,15 @@ class InsideArticles extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     'مقالة',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                   ),
                   article(),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -131,7 +131,7 @@ class InsideArticles extends StatelessWidget {
                                   size: 40,
                                   color: HexColor('#0F75BD'),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 8,
                                 ),
                                 Text(
@@ -166,7 +166,7 @@ class InsideArticles extends StatelessWidget {
                                   size: 40,
                                   color: HexColor('#C21975'),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 8,
                                 ),
                                 Text(
@@ -185,7 +185,7 @@ class InsideArticles extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -204,7 +204,8 @@ class InsideArticles extends StatelessWidget {
                       DefaultButton(
                           function: () {
                             navigateandfinish(
-                                context: context, widget: BottomBarScreen());
+                                context: context,
+                                widget: const BottomBarScreen());
                           },
                           text: 'رجوع للرئيسية',
                           containerheight:
@@ -214,13 +215,13 @@ class InsideArticles extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * .4),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   )
                 ],
               ),
             ),
-            fallback: (context) => Center(
+            fallback: (context) => const Center(
               child: CircularProgressIndicator(),
             ),
           ),
@@ -229,15 +230,15 @@ class InsideArticles extends StatelessWidget {
     );
   }
 
-  Widget article() => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+  Widget article() => const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: Text(
-                'كلام مقالات',
+                'وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
                 textDirection: TextDirection.rtl,
               ),

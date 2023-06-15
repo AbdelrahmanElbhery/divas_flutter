@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:training2/components/component.dart';
+import 'package:training2/modules/inside_product.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({Key? key}) : super(key: key);
@@ -13,7 +15,7 @@ class ProductsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: GridView.count(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
               crossAxisSpacing: 22.5,
               childAspectRatio: 1 / 1.68,
@@ -21,19 +23,25 @@ class ProductsScreen extends StatelessWidget {
                 Column(
                   children: [
                     Expanded(
-                      child: Card(
-                        clipBehavior: Clip.antiAliasWithSaveLayer,
-                        elevation: 5,
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Image(
-                                image: AssetImage(
-                                    'assets/images/Sale_Category Banner Mobile.jpg'),
-                                fit: BoxFit.fill,
+                      child: InkWell(
+                        onTap: () {
+                          navigate_to(
+                              context: context, widget: const InProduct());
+                        },
+                        child: const Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          elevation: 5,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Image(
+                                  image: AssetImage(
+                                      'assets/images/Sale_Category Banner Mobile.jpg'),
+                                  fit: BoxFit.fill,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -52,7 +60,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -64,7 +72,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,
@@ -77,7 +85,7 @@ class ProductsScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         elevation: 5,
@@ -109,7 +117,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -121,7 +129,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,
@@ -134,7 +142,7 @@ class ProductsScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         elevation: 5,
@@ -166,7 +174,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -178,7 +186,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,
@@ -191,7 +199,7 @@ class ProductsScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         elevation: 5,
@@ -223,7 +231,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -235,7 +243,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,
@@ -248,7 +256,7 @@ class ProductsScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         elevation: 5,
@@ -280,7 +288,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -292,7 +300,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,
@@ -305,7 +313,7 @@ class ProductsScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Card(
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         elevation: 5,
@@ -337,7 +345,7 @@ class ProductsScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Text('فستان فرح تركى',
                             style: TextStyle(
                                 color: HexColor('#48145A'),
@@ -349,7 +357,7 @@ class ProductsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * .05,
                       child: ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Icon(
                           Icons.star,

@@ -253,23 +253,26 @@ class ContactUs extends StatelessWidget {
           color: Colors.white,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    textDirection: TextDirection.rtl,
-                  ),
-                  Text(
-                    title2,
-                    style: TextStyle(fontSize: 12),
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      title,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                      textDirection: TextDirection.rtl,
+                    ),
+                    Text(
+                      title2,
+                      textAlign: TextAlign.end,
+                      style: TextStyle(fontSize: 12),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 width: 10,

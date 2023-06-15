@@ -103,10 +103,10 @@ class InsideArticles extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    HomeCubit.get(context).articlesdetails!.name!,
+                    'مقالة',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                   ),
-                  article(HomeCubit.get(context).articlesdetails!),
+                  article(),
                   SizedBox(
                     height: 20,
                   ),
@@ -229,7 +229,7 @@ class InsideArticles extends StatelessWidget {
     );
   }
 
-  Widget article(ArticlesDetailsModel model) => Padding(
+  Widget article() => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -237,7 +237,7 @@ class InsideArticles extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                model.description!,
+                'كلام مقالات',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
                 textDirection: TextDirection.rtl,
               ),

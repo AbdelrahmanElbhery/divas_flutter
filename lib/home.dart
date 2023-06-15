@@ -683,8 +683,6 @@ class _Home_ScrState extends State<Home_Scr> {
                 ),
                 InkWell(
                   onTap: () {
-                    HomeCubit.get(context).getArticlesDetails(
-                        HomeCubit.get(context).articles!.data![0].id!);
                     navigate_to(context: context, widget: InsideArticles());
                   },
                   child: Container(
@@ -715,7 +713,7 @@ class _Home_ScrState extends State<Home_Scr> {
                         ),
                         Text(
                           textAlign: TextAlign.center,
-                          HomeCubit.get(context).articles!.data![0].name!,
+                          'title',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 30,

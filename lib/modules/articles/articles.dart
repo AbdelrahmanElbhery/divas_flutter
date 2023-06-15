@@ -13,28 +13,22 @@ class ArticlesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<HomeCubit, HomeStates>(
-      listener: (context, state) {},
-      builder: (context, state) {
-        return Scaffold(
-            backgroundColor: Colors.white,
-            body: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: ListView.separated(
-                  itemBuilder: (context, index) => articlescr(
-                      context, HomeCubit.get(context).articles!.data![index]),
-                  separatorBuilder: (context, index) => SizedBox(
-                        height: 20,
-                      ),
-                  itemCount: HomeCubit.get(context).articles!.data!.length),
-            ));
-      },
-    );
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: ListView.separated(
+              itemBuilder: (context, index) => articlescr(context),
+              separatorBuilder: (context, index) => SizedBox(
+                    height: 20,
+                  ),
+              itemCount: 5),
+        ));
+    ;
   }
 
-  Widget articlescr(context, ArticleData articles) => InkWell(
+  Widget articlescr(context) => InkWell(
         onTap: () {
-          HomeCubit.get(context).getArticlesDetails(articles.id!);
           navigate_to(context: context, widget: InsideArticles());
         },
         child: Container(
@@ -63,7 +57,7 @@ class ArticlesScreen extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                articles.name!,
+                'title',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,

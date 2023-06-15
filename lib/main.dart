@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (BuildContext context) => HomeCubit()
-        ..getArticles()
-        ..getFacebookPosts(),
+      create: (BuildContext context) => HomeCubit(),
       child: BlocConsumer<HomeCubit, HomeStates>(
         listener: (context, state) {},
         builder: (context, state) {

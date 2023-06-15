@@ -28,7 +28,7 @@ class FacebookPosts extends StatelessWidget {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.black,
                     )),
@@ -37,16 +37,17 @@ class FacebookPosts extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {
-                        navigate_to(context: context, widget: Notifications());
+                        navigate_to(
+                            context: context, widget: const Notifications());
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         MdiIcons.bellAlert,
                         size: 30,
                         color: Colors.grey,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 6.0, top: 5),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 6.0, top: 5),
                       child: CircleAvatar(
                         radius: 9,
                         child: Text('2'),
@@ -70,9 +71,9 @@ class FacebookPosts extends StatelessWidget {
             actions: [
               IconButton(
                   onPressed: () {
-                    navigate_to(context: context, widget: Settings());
+                    navigate_to(context: context, widget: const Settings());
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.menu,
                     color: Colors.black,
                   ))
@@ -81,7 +82,7 @@ class FacebookPosts extends StatelessWidget {
           backgroundColor: Colors.white,
           body: ListView.separated(
               itemBuilder: (context, index) => posts(context),
-              separatorBuilder: (context, index) => SizedBox(
+              separatorBuilder: (context, index) => const SizedBox(
                     height: 5,
                   ),
               itemCount: 3),
@@ -90,7 +91,7 @@ class FacebookPosts extends StatelessWidget {
     );
   }
 
-  Widget posts(context) => Container(
+  Widget posts(context) => SizedBox(
         height: MediaQuery.of(context).size.height * .59,
         child: Card(
           elevation: 3,
@@ -108,7 +109,7 @@ class FacebookPosts extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
+                        children: const [
                           Text(
                             'Diva widding dress',
                             style: TextStyle(
@@ -121,10 +122,10 @@ class FacebookPosts extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    CircleAvatar(
+                    const CircleAvatar(
                       backgroundImage: AssetImage(
                         'assets/images/Sale_Category Banner Mobile.jpg',
                       ),
@@ -132,31 +133,31 @@ class FacebookPosts extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 22,
                 ),
-                Text(
+                const Text(
                   'الأصدقاء لا يغارون الأصدقاء يساعدون على التألق',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Card(
+                const Card(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   elevation: 2,
                   child: Image(
                       image: AssetImage(
                           'assets/images/Sale_Category Banner Mobile.jpg')),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.blue,
                         radius: 12,
                         child: Icon(
@@ -165,7 +166,7 @@ class FacebookPosts extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.red,
                         radius: 12,
                         child: Icon(
@@ -174,7 +175,7 @@ class FacebookPosts extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Text(
@@ -184,7 +185,7 @@ class FacebookPosts extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             color: HexColor('#606770')),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         '1 comment',
                         style: TextStyle(
@@ -195,7 +196,7 @@ class FacebookPosts extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 17,
                 ),
                 InkWell(
@@ -214,10 +215,10 @@ class FacebookPosts extends StatelessWidget {
                           color: Colors.blue[500],
                           size: 30,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 23,
                         ),
-                        Text(
+                        const Text(
                           'اضغط للذهاب للفيس بوك',
                           style: TextStyle(
                               fontSize: 20,

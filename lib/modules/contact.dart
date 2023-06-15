@@ -251,39 +251,35 @@ class ContactUs extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Container(
           color: Colors.white,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      title,
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                      textDirection: TextDirection.rtl,
-                    ),
-                    Text(
-                      title2,
-                      style: TextStyle(fontSize: 12),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Icon(
-                  icon,
-                  color: HexColor('#4A4B4D'),
-                  size: 35,
-                )
-              ],
-            ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    textDirection: TextDirection.rtl,
+                  ),
+                  Text(
+                    title2,
+                    style: TextStyle(fontSize: 12),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Icon(
+                icon,
+                color: HexColor('#4A4B4D'),
+                size: 35,
+              )
+            ],
           ),
         ),
       );
